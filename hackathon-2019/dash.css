@@ -1,0 +1,127 @@
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+.primary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.secondary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.tertiary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.key-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.back {
+    text-align: left;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.full {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+.one-third {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 33%;
+    height: 65vh;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.two-thirds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 67%;
+    height: 65vh;
+}
+
+.one-eigth {
+    height: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.seven-eigths {
+    height: 87%;
+}
+
+.inverted {
+    color: white;
+}
+.rounded-bubble {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+#osu-wide-logo {
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+#academics-research {
+   background-color: #660000;
+}
+#housing-activities {
+    background-color: #000000;
+}
+#visitors-attractions {
+    background-color: #839ec1;
+}
+#admin-facilities {
+    background-color: #666666;
+}
+#med-vet {
+    background-color: #909738;
+}
+#athletics {
+    background-color: #442369;
+}
