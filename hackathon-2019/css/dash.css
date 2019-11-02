@@ -1,0 +1,31 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+.primary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    size: 100px;
+    text-align: left;
+}
+
+.secondary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.tertiary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.left-align {
+    text-align: left;
+}
