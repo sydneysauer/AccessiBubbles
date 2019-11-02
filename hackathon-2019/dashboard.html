@@ -23,7 +23,22 @@
             </div>
             <div class="two-thirds">
                 <div class="seven-eigths">
-                    <p class="secondary-text">DATA HERE</p>
+                        <div class="electricity-chart" id="chart">
+                            <svg></svg>
+                        </div>
+                        <script src="https://d3js.org/d3.v4.js"></script>
+                        <script src="js/OSUBuildingElectricityConsumption.js"></script>
+                        <script>
+                            d3.csv("https://raw.githubusercontent.com/sydneysauer/HackOHIO/master/OSUBuildingElectricityConsumptionAverage.csv", function(error, data) {
+                              if (error) {
+                                  console.error('Error getting or parsing the data.');
+                                  throw error;
+                              }
+                              var chart = bubbleChart("Heebo").width(600).height(400);
+                              // selection.datum() returns the bound datum for the first element in the selection and doesn't join the specified array of data with the selected elements
+                              d3.select('#chart').datum(data).call(chart);
+                            });
+                        </script>
                 </div>
                 <div class="one-eigth">
                     <p class="tertiary-text inverted rounded-bubble" id="academics-research">Academics/Research</p>

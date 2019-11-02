@@ -102,6 +102,14 @@ a:hover {
     padding-right: 10px;
 
 }
+.electricity-chart {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+
 #osu-wide-logo {
     max-width: 400px;
     display: block;
