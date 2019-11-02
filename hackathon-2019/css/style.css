@@ -1,0 +1,92 @@
+body {
+    background-image: url("img/osu-landscape-1.jpeg");
+    background-color: #a3a3a3;
+}
+select {
+    position: relative;
+    background: transparent;
+    background-color: #dddec6;
+    border: none;
+    padding: 5px;
+    padding-bottom: 10px;
+    border:0px;
+    outline:none;
+    font-family: 'Heebo', sans-serif;
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+button {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    display: block;
+    margin: auto;
+    border-radius: 4px;
+    background-color:#dddec6;
+    padding: 5px 5px 5px 5px;
+    color: black;
+}
+button:hover {
+    box-shadow: 3px 3px 1px #666666;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.primary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.secondary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.tertiary-text {
+    color: black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.selection-panel {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+    border: 4px solid black;
+    width: 40%;
+    display: block;
+    margin: auto;
+    z-index: 999;
+}
+.inverted-box {
+    background-color: black;
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#osu-logo {
+    padding-top: 30px;
+    max-width: 100px;
+    display: block;
+    margin: auto;
+}
+
+#engie-logo {
+    max-width: 150px;
+    display: block;
+    margin: auto;
+    filter: invert(100%);
+
+}
