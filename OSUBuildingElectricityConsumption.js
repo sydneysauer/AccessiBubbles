@@ -8,16 +8,16 @@
  * @requires d3.v4.js
  * 
  */
-function bubbleChart(font) {
+function bubbleChart(font, scale) {
     var width = 960,
         height = 1000,
         marginTop = 96,
-        minRadius = 3,
-        maxRadius = 40,
+        minRadius = 3*scale,
+        maxRadius = 40*scale,
         columnForColors = "Category",
         columnForTitle = "Building",
         columnForRadius = "Value",
-        forceApart = -37,
+        forceApart = -37*scale,
         unitName = "kWh/day",
         customColors = true,
         acadres = "#bb0000",
