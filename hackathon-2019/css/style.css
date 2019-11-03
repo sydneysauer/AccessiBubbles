@@ -19,16 +19,19 @@ select {
 
 button {
     font-family: 'Heebo', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: block;
     margin: auto;
     border-radius: 4px;
-    background-color:#dddec6;
+    background-color:#e0e0e0;
     padding: 5px 5px 5px 5px;
     color: black;
+    width: 35%;
 }
 button:hover {
-    box-shadow: 3px 3px 1px #666666;
+    box-shadow: 3px 3px 1px #000000;
+    background-color:#bb0000;
+    color: white;
 }
 a {
     text-decoration: none;
