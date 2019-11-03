@@ -1,6 +1,13 @@
 body {
-    background-image: url("img/osu-landscape-1.jpeg");
+    background: url("../img/osu-background.jpg");
+    background-repeat: no-repeat;
     background-color: #a3a3a3;
+    background-size: 100vw 100vh;
+}
+#background-image {
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 select {
     position: relative;
