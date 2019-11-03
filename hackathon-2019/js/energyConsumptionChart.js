@@ -1,76 +1,4 @@
-$(document).ready(function(){
-    $('.utility-selector').on('click',function(){
-        console.log($(this).val())
-        var value=$(this).val();
-        var queryString = "?para1="+ value;
-        window.location.href = "dashboard.html" + queryString;
-         $('#dashboardVal').text(value);
-
-      })
-});
-
-
-// variables that map element ID to user-friendly strings
-var energyIDs = ["electricity", "cold-water", "hot-water", "steam"]
-var energyTypes = ["electricity", "cold water", "hot water", "steam"];
-var maxRad = [35, 33, 33, 33];
-var farApart = [40, 56, 120, 51];
-var unitLabel = ["kWhr/day", "kBTU/hr", "kBTU/hr","kBTU/hr"];
-
-//Fill the energy value by parsing queryString
-function fillContentType() {
-    //Get energy type from url
-    console.log(queryString);
-    var queryString = decodeURIComponent(window.location.search); //parsing
-    queryString = queryString.substring(1);
-    var queries = queryString.split("=");
-    var energy = queries[1];
-    var i = energyIDs.indexOf(energy);
-    energy = energyTypes[i];
-
-    // Change header to say what is being viewed 
-    var viewing = "How much energy do we use for ";
-    document.getElementById("data-view").innerHTML = viewing + energy + "?";
-
-    //Change unit text (kWh or BTU)
-    var unitInfo = "";
-    var unit = ""
-    if (energy=="electricity") {
-        unit = "kWh";
-        unitInfo = "Scientifically speaking, one kWh (kilowatt hour) is equal to the power necesary to use a thousand watts of energy for an hour. In the real world, think of a kilowatt hour as the amount of energy needed to run a lightbulb all day.";
-        document.getElementById("kBTU-demo").style.display = "none";
-        document.getElementById("kWh-demo").style.display = "block";
-    }
-    else {
-        unit = "kBTU";
-        unitInfo = "Scientifically speaking, one BTU (British Thermal Unit) is the amount of energy needed to raise a pound of water by one degree Farenheit. A kBTU is a thousand of those. In the real world, think of one kBTU as the energy released when you burn a thousand matches.";
-        document.getElementById("kWh-demo").style.display = "none";
-        document.getElementById("kBTU-demo").style.display = "block";
-    }
-    console.log(unitInfo);
-    document.getElementById("unit").innerHTML = "WHAT DOES " + unit + " MEAN?";
-    document.getElementById("unitInfo").innerHTML = unitInfo;
-
-    //Generate bubble chart
-    makeChart(energyIDs[i], 3, maxRad[i], farApart[i], unitLabel[i]);
-
-}  
-
-function makeChart(utility, minRad, maxRad, farApart, unit)
-{
-    var url = "https://raw.githubusercontent.com/kateluckerman/HACKOHIO2019/master/" + utility + ".csv";
-d3.csv(url, function(error, data) {
-if (error) {
-    console.error('Error getting or parsing the data.');
-    throw error;
-}
-var chart = bubbleChart("Heebo", unit, 1.5, minRad, maxRad, farApart).width(700).height(500);
-// selection.datum() returns the bound datum for the first element in the selection and doesn't join the specified array of data with the selected elements//
-d3.select('#chart').datum(data).call(chart);
-});
-    }
-
-/**
+﻿/**
  * Generates a bubble chart that displays the relative electricity consumption of each building on the OSU campus, color-coded by category
  *
  * Original Author: Deborah Mesquita
@@ -504,4 +432,3 @@ function bubbleChart(font, unit, scale, minR, maxR, fA) {
 
     return chart;
 }
-

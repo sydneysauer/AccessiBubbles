@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head class="grey">
         <title>Main Dashboard</title>
         <link rel="icon" type="image/jpg" href="img/osu-logo.jpg">
-        <link href="https://fonts.googleapis.com/css?family=Heebo:100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Heebo::300,400,500i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="dash.css">
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -11,39 +11,35 @@
         crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/49c7606d46.js"></script>
         <script src="js/selection.js"></script>
-        <a href="index.html" class="back"><i class="fas fa-arrow-left"></i>  VIEW ANOTHER UTILITY</a>
-        <div class="full">
-            <img src="img/osu-wide-logo.png" alt="osu logo" id="osu-wide-logo">
-        </div>
+
+    
     </head>
     <body onload="fillContentType()">
         <span id="dashboardVal"></span>
-        <p class="primary-text" id="data-view">VIEWING DATA FOR: </p>
+        <div class="header">
+            <br>
+                <div class="full">
+                    <img src="img/osu-wide-logo.png" alt="osu logo" id="osu-wide-logo">
+                </div>
+
+        </div>
+        
+        <p class="primary-text" id="data-view"></p>
         <div class="full" id="data-display">
             <div class="one-third">
                 <p class="secondary-text">WHAT DOES THIS CHART MEAN?</p>
                 <p class="tertiary-text">Mouse over each dot to see how much energy the building is using. The bigger the dot, the more energy!</p>
                 <p class="secondary-text" id="unit">WHAT DOES kWh MEAN?</p>
                 <p class="tertiary-text" id="unitInfo">Scientifically speaking, one kWh (kilowatt hour) is equal to the power necesary to use a thousand watts of energy for an hour. In the real world, think of a kilowatt hour as the amount of energy needed to run a lightbulb all day.</p>
-                <p class="primary-text">1 kWh = 1 x <i class="far fa-lightbulb"></i> x <i class="fas fa-calendar-day"></i></p>
+                <p id="kWh-demo" class="primary-text">1 kWh = 1 x <i class="far fa-lightbulb"></i> x <i class="fas fa-calendar-day"></i></p>
+                <p id="kBTU-demo" class="primary-text">1 kBTU = 1,000 x <i class="fas fa-fire"></i></p>
             </div>
             <div class="one-half">
                 <div class="electricity-chart" id="chart">
                     <svg></svg>
                 </div>
                 <script src="https://d3js.org/d3.v4.js"></script>
-                <script src="js/OSUBuildingElectricityConsumption.js"></script>
-                <script>
-                    d3.csv("https://raw.githubusercontent.com/sydneysauer/HackOHIO/master/OSUBuildingElectricityConsumptionAverage.csv", function(error, data) {
-                        if (error) {
-                            console.error('Error getting or parsing the data.');
-                            throw error;
-                        }
-                        var chart = bubbleChart("Heebo", 1.35).width(600).height(450);
-                        // selection.datum() returns the bound datum for the first element in the selection and doesn't join the specified array of data with the selected elements
-                        d3.select('#chart').datum(data).call(chart);
-                    });
-                </script>
+
             </div>
             <div class="one-sixth">
                     <p class="tertiary-text inverted rounded-bubble" id="academics-research">Academics/Research</p>
@@ -54,6 +50,7 @@
                     <p class="tertiary-text inverted rounded-bubble" id="athletics">Athletics</p>
             </div>
         </div>
+        <a href="index.html" class="back grey"><i class="fas fa-arrow-left"></i>  VIEW ANOTHER UTILITY</a>
     </div>
 
     </body>

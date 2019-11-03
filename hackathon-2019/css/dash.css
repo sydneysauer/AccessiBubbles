@@ -1,4 +1,10 @@
-
+.header {
+    background-color: #e0e0e0;
+    margin: 0;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
 a {
     text-decoration: none;
     color: black;
@@ -9,9 +15,9 @@ a:hover {
     text-decoration: underline;
 }
 .primary-text {
-    color: black;
+    color: #bb0000;
     font-family: 'Heebo', sans-serif;
-    font-weight: bold;
+    font-weight: 800;
     font-size: 2.5rem;
     text-align: center;
 }
@@ -19,16 +25,17 @@ a:hover {
 .secondary-text {
     color: black;
     font-family: 'Heebo', sans-serif;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     font-size: 1.2rem;
-    text-decoration-color: underline;
+    text-decoration: underline;
+    text-decoration-color: #bb0000;
 }
 
 .tertiary-text {
     color: black;
     font-family: 'Heebo', sans-serif;
-    font-weight: bold;
+    font-weight: 300;
     text-align: center;
     font-size: 1rem;
 }
@@ -45,9 +52,13 @@ a:hover {
 }
 
 .back {
-    text-align: left;
+    text-align: center;
+    display: block;
+    margin: auto;
     padding-left: 0px;
     padding-top: 0px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
 }
 
 .full {
@@ -64,7 +75,6 @@ a:hover {
     align-content: center;
     width: 33%;
     height: 65vh;
-    background-color: #e0e0e0;
     border-radius: 4px;
     padding-left: 20px;
     padding-right: 20px;
@@ -83,10 +93,10 @@ a:hover {
     width: 17%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    justify-content: center;
+    align-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .electricity-chart {
     display: block;
@@ -114,7 +124,7 @@ a:hover {
 
 
 #osu-wide-logo {
-    max-width: 400px;
+    max-width: 450px;
     display: block;
     margin: auto;
 }
