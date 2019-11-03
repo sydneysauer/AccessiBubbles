@@ -6,59 +6,28 @@
         <link href="https://fonts.googleapis.com/css?family=Heebo:100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/49c7606d46.js"></script>
+        <script src="js/selection.js"></script>
     </head>
     <body class="index">
         <br><br><br>
         <div class="selection-panel">
             <img src="img/osu-logo.jpg" alt="OSU logo" id="osu-logo">
-            <p class="primary-text">Welcome to the future of energy efficiency at OSU.</p>
-            <p class="secondary-text">Please select your search criteria:</p>
-        
-                <p class="secondary-text"><i class="far fa-lightbulb"></i>   UTILITY</p>
-                <select class="custom-select">
-                        <option value="see-all">See All</option>
-                        <option value="chilled-water">Chilled Water</option>
-                        <option value="electricity">Electricity</option>
-                        <option value="heating-hot-water">Heating Hot Water</option>
-                        <option value="steam">Steam</option>
-                </select>
-                <p class="secondary-text"><i class="far fa-building"></i>   BUILDING</p>
-                <select class="custom-select">
-                        <option value="see-all">See All</option>
-                        <option value="academic">Academic</option>
-                        <option value="academic/administrative">Academic/Administrative</option>
-                        <option value="academic/research">Academic/Research</option>
-                        <option value="administration">Administration</option>
-                        <option value="agricultural">Agricultural</option>
-                        <option value="athletics">Athletics</option>
-                        <option value="auditorium">Auditorium</option>
-                        <option value="facilities">Facilities</option>
-                        <option value="facilities/administration">Facilities/Administration</option>
-                        <option value="hotel">Hotel</option>
-                        <option value="lab">Lab</option>
-                        <option value="library">Library</option>
-                        <option value="office">Office</option>
-                        <option value="osumwc">OSUWMC</option>
-                        <option value="patient-care">Patient Care</option>
-                        <option value="patient-care/research">Patient Care/Research</option>
-                        <option value="research">Research</option>
-                        <option value="student-activity">Student Activity</option>
-                        <option value="student-housing">Student Housing</option>
-                        <option value="veterinary">Veterinary</option>
-                        <option value="other">Other</option>
-                </select>
-                <p class="secondary-text"><i class="fas fa-university"></i>   CAMPUS</p>
-                <select class="custom-select">
-                        <option value="see-all">See All</option>
-                        <option value="main">Main</option>
-                        <option value="medical-center">Medical Center</option>
-                </select>
+            <p class="primary-text">Let's take a look at energy efficiency at OSU.</p>
+            <p class="secondary-text">Click on an icon to begin!</p>
+                <button id="electricityID" class="utility-selector" value="electricity"><i class="far fa-lightbulb"></i>  Electricity</button><br>
+                <button id="electricityID" class="utility-selector" value="cold-water"><i class="fas fa-tint"></i> Cold Water</button><br>
+                <button id="hotwaterID" class="utility-selector" value="hot-water"><i class="fas fa-shower"></i> Hot Water</button><br>
+                <button id="steamID" class="utility-selector" value="steam"><i class="fas fa-mug-hot"></i>  Steam</button><br>
                 <br>
-                <button><a href="dashboard.html">LOAD DATA</a></button>
         </div>
         <div class="inverted-box">
                 <img src="img/bw-engie-logo.png" alt="engie-logo" id="engie-logo">
         </div>
+       
     </body>
 </html>
